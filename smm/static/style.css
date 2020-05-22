@@ -1,0 +1,11 @@
+/* header class */
+
+.headSticky{
+    position: fixed;
+  top: 0;
+  width: 100%
+}
+
+.headSticky + content{
+    padding-top: 120px;
+}

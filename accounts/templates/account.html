@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+
+<div style="padding-top:180px">
+
+</div>
+<div class="container">
+    <h2>Quotations</h2>
+
+    <div class="row">
+        {% for quotation in quotations.all %}
+        <div class="card col-10 row ml-1 mt-2">
+            <div class="col-6">
+                <a href="{% url 'details' quotation.id %}">
+                    <h5 class="pl-2">{{ quotation.name }}</h5>
+                </a>
+
+            </div>
+            <div class="col-6">
+                {{ quotation.date }}
+            </div>
+        </div>
+
+
+        {% endfor %}
+
+    </div>
+
+</div>
+
+<div style="margin-bottom: 150px;">
+
+</div>
+
+{% endblock %}

@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+
+<div style="padding-top:180px">
+
+</div>
+<div class="container">
+    <div style="width: 50%;">
+
+
+        <h2 class="pb-5">Quotation Details</h2>
+
+        <div class="form-group">
+            <label for="name"> Package :</label>
+            <input type="text" readonly class="form-control" name="pack" value="{{quot.packNo}}">
+        </div>
+        <div class="form-group">
+            <label for="name">Name :</label>
+            <input type="text" readonly class="form-control" name="name" value="{{quot.name}}">
+        </div>
+        <div class="form-group">
+            <label for="name">Email :</label>
+            <input type="email" readonly class="form-control" name="email" value="{{quot.email}}">
+        </div>
+        <div class="form-group">
+            <label for="name">Address :</label>
+            <textarea name="address" readonly id="" class="form-control">{{quot.address}}</textarea>
+        </div>
+
+        <div class="form-group">
+            <label for="name">Remarks :</label>
+            <textarea name="remarks" readonly id="" class="form-control">{{quot.remarks}}</textarea>
+        </div>
+
+        <a class=" btn btn-success rounded shadow " href="{% url 'account' %}"> &nbsp; &nbsp; Back &nbsp; &nbsp; </a>
+    </div>
+
+
+</div>
+
+<div style="margin-bottom: 150px;">
+
+</div>
+
+{% endblock %}
